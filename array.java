@@ -5,7 +5,6 @@ public class array {
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
         }
-
         System.out.println("Sum of the array elements is: " + sum);
     }  // end of main method
 }

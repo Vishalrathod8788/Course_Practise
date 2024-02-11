@@ -6,5 +6,10 @@ public class array {
             sum += arr[i];
         }
         System.out.println("Sum of the array elements is: " + sum);
+        String str = "Hello World";
+        System.out.println(str.substring(0, 11));
+        System.out.println(str.length());
+        System.out.println(str.charAt(0));
+        System.out.println(str.charAt(str.length() - 1));
     }  // end of main method
 }

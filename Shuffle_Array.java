@@ -12,18 +12,5 @@ public class Shuffle_Array {
         for (int i = 0; i < nums.length; i++) {
             System.out.print(ans[i] + " ");
         }
-//        int j = 0;
-//        for(int i = 0; i < n; i++){
-//            ans[j] = nums[i];
-//            j += 2;
-//        }
-//        j = 1;
-//        for(int i = n; i < nums.length; i++){
-//            ans[j] = nums[i];
-//            j += 2;
-//        }
-//        for(int i = 0; i < ans.length; i++){
-//            System.out.print(ans[i] + " ");
-//        }
     }
 }

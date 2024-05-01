@@ -18,3 +18,4 @@ public class Decrising {
         dec(n-1);
     }
 }
+

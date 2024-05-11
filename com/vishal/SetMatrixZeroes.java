@@ -1,3 +1,5 @@
+package com.vishal;
+
 public class SetMatrixZeroes {
     public void setZeroes(int[][] matrix) {
         int n = matrix.length;

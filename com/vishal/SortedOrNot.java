@@ -1,3 +1,5 @@
+package com.vishal;
+
 public class SortedOrNot {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};

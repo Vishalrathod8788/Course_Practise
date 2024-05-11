@@ -1,3 +1,5 @@
+package com.vishal;
+
 public class Shuffle_Array {
 
     public static void main(String[] args) {

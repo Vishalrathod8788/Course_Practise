@@ -1,4 +1,4 @@
-package com.vishal;
+package com.vishal.recursion;
 
 import java.util.Arrays;
 

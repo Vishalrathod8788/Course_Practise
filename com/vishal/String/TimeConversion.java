@@ -16,6 +16,7 @@ public class TimeConversion {
         }
     }
 
+
     public static void main(String[] args) {
         // Example usage:
         System.out.println(timeConversion("07:45:54PM"));  // Output: "19:45:54"

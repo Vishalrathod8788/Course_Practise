@@ -8,8 +8,11 @@ public class StackDemo {
         stack.push(1);
         stack.push(2);
         stack.push(3);
-        System.out.println(stack.peek());
-        stack.pop();
-        System.out.println(stack.peek());
+        stack.push(4);
+        stack.push(5);
+        System.out.println(stack);
+        for (int i = 0; i < 5; i++) {
+            System.out.println(stack+" "+stack.pop() +" "+ stack.size());
+        }
     }
 }

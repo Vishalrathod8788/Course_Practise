@@ -4,11 +4,12 @@ import java.util.Stack;
 
 public class StackDemo {
     public static void main(String[] args) {
-        Stack<Integer> satck = new Stack<>();
-        satck.push(1);
-        satck.push(2);
-        satck.push(3);
-        System.out.println(satck.peek());
-
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        System.out.println(stack.peek());
+        stack.pop();
+        System.out.println(stack.peek());
     }
 }

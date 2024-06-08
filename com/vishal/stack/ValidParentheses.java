@@ -4,10 +4,10 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class ValidParentheses {
-    public static boolean main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-
+        sc.close();
         Stack<Character> st = new Stack<>();
 
         for(int i=0; i<str.length(); i++){
@@ -16,15 +16,21 @@ public class ValidParentheses {
                 st.push(ch);
             }else{
                 if(st.isEmpty()){
-                    return false;
+                    System.out.println(true);
+                    return;
                 }
                 char top = st.pop();
                 if (ch == ')' && top != '(' || ch == ']' && top != '[' || ch == '}' &&  top != '{'){
-                    return false;
+                    System.out.println(false);
+                    return;
                 }
             }
         }
-        return st.isEmpty();
+        if(st.isEmpty()){
+            System.out.println(true); // All parentheses are valid
+        } else {
+            System.out.println(false); // Some parentheses are left unmatched
+        }
     }
 }
 

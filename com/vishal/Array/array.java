@@ -1,4 +1,4 @@
-package com.vishal;
+package com.vishal.Array;
 
 public class array {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.vishal;
+package com.vishal.Sort;
 
 import java.util.Arrays;
 

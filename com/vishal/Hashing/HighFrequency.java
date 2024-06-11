@@ -1,4 +1,4 @@
-package com.vishal.hashing;
+package com.vishal.Hashing;
 
 public class HighFrequency {
     public static void main(String[] args) {

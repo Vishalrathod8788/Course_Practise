@@ -1,4 +1,4 @@
-package com.vishal.hashing;
+package com.vishal.Hashing;
 import java.util.*;
 public class Hashing {
     public static void main(String[] args) {

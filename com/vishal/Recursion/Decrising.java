@@ -1,4 +1,4 @@
-package com.vishal.recursion;
+package com.vishal.Recursion;
 
 import java.util.Scanner;
 

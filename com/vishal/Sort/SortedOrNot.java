@@ -1,4 +1,4 @@
-package com.vishal;
+package com.vishal.Sort;
 
 public class SortedOrNot {
     public static void main(String[] args) {

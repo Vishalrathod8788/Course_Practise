@@ -1,6 +1,5 @@
-package com.vishal.stack;
+package com.vishal.Stack;
 
-import java.sql.SQLOutput;
 import java.util.Stack;
 
 public class DuplicateBracket {

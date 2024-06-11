@@ -1,4 +1,4 @@
-package com.vishal.stack;
+package com.vishal.Stack;
 
 import java.util.Scanner;
 import java.util.Stack;

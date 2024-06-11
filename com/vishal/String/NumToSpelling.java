@@ -1,4 +1,4 @@
-package com.vishal;
+package com.vishal.String;
 
 import java.util.Scanner;
 

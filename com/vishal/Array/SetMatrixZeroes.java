@@ -1,4 +1,4 @@
-package com.vishal;
+package com.vishal.Array;
 
 public class SetMatrixZeroes {
     public void setZeroes(int[][] matrix) {

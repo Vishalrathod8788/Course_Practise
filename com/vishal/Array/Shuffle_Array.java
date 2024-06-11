@@ -1,4 +1,4 @@
-package com.vishal;
+package com.vishal.Array;
 
 public class Shuffle_Array {
 

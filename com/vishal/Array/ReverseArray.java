@@ -1,4 +1,4 @@
-package com.vishal;
+package com.vishal.Array;
 
 import java.util.Arrays;
 

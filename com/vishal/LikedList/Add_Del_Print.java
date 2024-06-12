@@ -1,17 +1,18 @@
 package com.vishal.LikedList;
 
 public class Add_Del_Print {
+
     public static class Node {
         int data;
-        DisplayNode.Node next;
+        Node next;
     }
     public static class Link {
-        DisplayNode.Node head;
-        DisplayNode.Node tail;
+        Node head;
+        Node tail;
         int size;
 
         void AddNode(int val){
-            DisplayNode.Node temp = new DisplayNode.Node();
+            Node temp = new Node();
             temp.data = val;
             temp.next = null;
             if (size == 0){
@@ -24,7 +25,7 @@ public class Add_Del_Print {
         }
 
         void Display(){
-            DisplayNode.Node temp = head;
+            Node temp = head;
             while(temp != null){
                 System.out.println(temp.data);
                 temp= temp.next;
@@ -51,7 +52,7 @@ public class Add_Del_Print {
                 head = tail = null;
                 size--;
             }else {
-                DisplayNode.Node temp = head;
+                Node temp = head;
                 for (int i = 0; i < size - 2; i++) {
                     temp = temp.next;
                 }

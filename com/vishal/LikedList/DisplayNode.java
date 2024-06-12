@@ -11,29 +11,38 @@ public class DisplayNode {
         int size;
 
         void AddNode(int val){
+            Node temp = new Node();
+            temp.data = val;
+            temp.next = null;
             if (size == 0){
-                Node temp = new Node();
-                temp.data = val;
-                temp.next = null;
                 head = tail = temp;
-                size++;
             }else {
-                Node temp = new Node();
-                temp.data = val;
-                temp.next = null;
                 tail.next = temp;
                 tail = temp;
-                size++;
+            }
+            size++;
+        }
+
+        void Display(){
+            Node temp = head;
+            while (temp != null){
+                System.out.println(temp.data);
+                temp = temp.next;
             }
         }
     }
 
     public static void main(String[] args) {
         Link ls = new Link();
+
+        //Add Node
         ls.AddNode(1);
         ls.AddNode(2);
         ls.AddNode(3);
         ls.AddNode(4);
         ls.AddNode(5);
+
+        //Display Node
+        ls.Display();
     }
 }

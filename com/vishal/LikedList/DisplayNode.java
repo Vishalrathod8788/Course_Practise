@@ -30,6 +30,18 @@ public class DisplayNode {
                 temp= temp.next;
             }
         }
+        
+        void RemoveFirst(){
+            if(size == 0){
+                System.out.println("List is empty");
+            } else if (size == 1) {
+                head = tail = null;
+                size = 0;
+            }else {
+                head = head.next;
+                size--;
+            }
+        }
 
         //Remove Last Node
         void RemoveLast(){

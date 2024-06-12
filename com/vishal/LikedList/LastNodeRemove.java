@@ -34,20 +34,17 @@ public class LastNodeRemove {
         }
 
         public void RemoveLastNode(){
-            if(size==0){
-                System.out.println("List is empty");
-            }
-            else if(size==1){
-                head=tail=null;
-                size=0;
-            }
-            else{
-                Node temp=head;
-                for(int i=0;i<size-2;i++){
-                    temp=temp.next;
+            if(size == 0){
+                System.out.println("List is Empty :");
+            } else if (size == 1) {
+                head = tail = null;
+            }else {
+                Node temp = head;
+                for (int i=0; i<size-2; i++){
+                    temp = temp.next;
                 }
-                temp.next=null;
-                tail=temp;
+                temp.next = null;
+                tail = temp;
                 size--;
             }
         }
@@ -68,6 +65,9 @@ public class LastNodeRemove {
         ls.Insert(90);
         ls.Insert(100);
 
+        ls.Display();
+        ls.RemoveLastNode();
+        System.out.println();
         ls.Display();
         ls.RemoveLastNode();
         System.out.println();

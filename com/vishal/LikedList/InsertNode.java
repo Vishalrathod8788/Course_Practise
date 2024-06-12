@@ -11,7 +11,19 @@ public class InsertNode {
         int size;
 
         void addNode(int val){
-
+            if (size == 0){
+                Node temp = new Node();
+                temp.data = val;
+                temp.next = null;
+                head = tail = null;
+                size++;
+            }else {
+                Node temp = new Node();
+                temp.data = val;
+                temp.next = null;
+                tail.next = temp;
+                tail = temp;
+            }
         }
     }
 

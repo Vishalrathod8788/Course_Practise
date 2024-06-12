@@ -34,13 +34,30 @@ public class DisplayNode {
         }
 
         void RemoveFirst(){
+            if(size == 0){
+                System.out.println("List is Empty");
+            } else if (size == 1) {
+                head = tail = null;
+            }else{
+                head = head.next;
+                size--;
+            }
+        }
+
+        //Remove Last Node
+        void RemoveLast(){
             if (size == 0){
                 System.out.println("List is Empty");
             }else if (size == 1){
                 head = tail = null;
                 size--;
             }else {
-                head = head.next;
+                Node temp = head;
+                for (int i = 0; i < size - 2; i++) {
+                    temp = temp.next;
+                }
+                temp.next = null;
+                tail = temp;
                 size--;
             }
         }
@@ -60,11 +77,18 @@ public class DisplayNode {
         ls.Display();
 
         //Remove Node
-        ls.RemoveFirst();
-        ls.RemoveFirst();
-        ls.RemoveFirst();
-        ls.RemoveFirst();
-        System.out.println("After Removing Node");
+        //ls.RemoveFirst();
+        //ls.RemoveFirst();
+        //ls.RemoveFirst();
+        //ls.RemoveFirst();
+        //System.out.println("After Removing Node");
+        //ls.Display();
+
+        // Remove Last Node
+        ls.RemoveLast();
+        ls.RemoveLast();
+        ls.RemoveLast();
+        ls.RemoveLast();
         ls.Display();
     }
 }

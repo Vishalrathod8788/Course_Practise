@@ -1,5 +1,7 @@
 package com.vishal.LikedList;
 
+import java.sql.SQLOutput;
+
 public class DisplayNode {
     public static class Node {
         int data;
@@ -25,9 +27,21 @@ public class DisplayNode {
 
         void Display(){
             Node temp = head;
-            while (temp != null){
+            while(temp != null){
                 System.out.println(temp.data);
-                temp = temp.next;
+                temp= temp.next;
+            }
+        }
+
+        void RemoveFirst(){
+            if (size == 0){
+                System.out.println("List is Empty");
+            }else if (size == 1){
+                head = tail = null;
+                size--;
+            }else {
+                head = head.next;
+                size--;
             }
         }
     }
@@ -43,6 +57,14 @@ public class DisplayNode {
         ls.AddNode(5);
 
         //Display Node
+        ls.Display();
+
+        //Remove Node
+        ls.RemoveFirst();
+        ls.RemoveFirst();
+        ls.RemoveFirst();
+        ls.RemoveFirst();
+        System.out.println("After Removing Node");
         ls.Display();
     }
 }

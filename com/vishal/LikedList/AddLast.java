@@ -35,11 +35,13 @@ public class AddLast {
     public static void main(String[] args) {
         LinkList ls = new LinkList();
 
-        ls.Display();
+        //ls.Display();
         ls.AddLast(500);
         ls.AddLast(600);
         ls.AddLast(700);
+        ls.AddLast(800);
         ls.Display();
+        System.out.println();
         ls.AddLast(1000);
         ls.Display();
     }

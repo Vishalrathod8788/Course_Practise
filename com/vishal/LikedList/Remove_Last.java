@@ -32,11 +32,17 @@ public class Remove_Last {
                 temp= temp.next;
             }
         }
-    }
 
-    //Remove Last Node :
-    void RemoveLast(){
-
+        //Remove Last Node :
+        void RemoveLast(){
+            Node temp = head;
+            for (int i=0; i<size-2; i++){
+                temp = temp.next;
+            }
+            tail = temp.next;
+            temp.next = null;
+            size--;
+        }
     }
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
@@ -45,7 +51,7 @@ public class Remove_Last {
         list.AddNode(3);
         list.AddNode(4);
         list.AddNode(5);
+        list.RemoveLast();
         list.Display();
     }
 }
-

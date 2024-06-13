@@ -23,16 +23,29 @@ public class Reverse_List {
             newNode.next = head;
             head = newNode;
         }
-        public void reverse(){
-            Node prev = null;
-            Node curr = head;
-            while(curr != null){
-                Node next = curr.next;
-                curr.next = prev;
-                prev = curr;
-                curr = next;
+
+        private Node getNodeAt(int idx){
+            Node temp = head;
+            for(int i=0; i<idx; i++){
+                temp = temp.next;
             }
-            head = prev;
+            return temp;
+        }
+        public void reverse(){
+            int li = 0;
+            int ri = size - 1;
+
+            while (li < ri){
+                Node left = getNodeAt(li);
+                Node rigth = getNodeAt(ri);
+
+                int temp = left.data;
+                left.data = rigth.data;
+                rigth.data = temp;
+
+                li++;
+                ri--;
+            }
         }
         public void display(){
             Node temp = head;

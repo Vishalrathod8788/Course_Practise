@@ -43,8 +43,12 @@ public class AddNode {
             if(top.state == 1){
                 idx++;
                 if (arr[idx] != null){
-                    top.node.left = new Node(arr[idx],null, null );
+                    Node leftnode = new Node(arr[idx], null, null);
+                    top.node.left = leftnode;
                     pair lp = new pair(top.node.left, 1);
+                    st.push(lp);
+                }else{
+                    top.node.left = null;
                 }
             } else if (top.state == 2) {
 

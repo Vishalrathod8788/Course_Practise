@@ -1,5 +1,7 @@
 package com.vishal.Tree;
 
+import java.util.Stack;
+
 public class AddNode {
     public static class Node{
         int data;
@@ -31,8 +33,25 @@ public class AddNode {
 
         Node root = new Node(arr[0], null, null);
         pair rootPair = new pair(root, 1);
-        int idx = 1;
 
+        Stack<pair> st = new Stack<>();
+        st.push(rootPair);
+
+        int idx = 0;
+        while (st.size() > 0){
+            pair top = st.peek();
+            if(top.state == 1){
+                idx++;
+                if (arr[idx] != null){
+                    top.node.left = new Node(arr[idx],null, null );
+                    pair lp = new pair(top.node.left, 1);
+                }
+            } else if (top.state == 2) {
+
+            }else {
+
+            }
+        }
     }
 
 }

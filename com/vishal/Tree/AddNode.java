@@ -25,6 +25,14 @@ public class AddNode {
         }
 
     }
+    public static void printInOrder(Node root) {
+        if (root != null) {
+            printInOrder(root.left);
+            System.out.print(root.data + " ");
+            printInOrder(root.right);
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -43,19 +51,28 @@ public class AddNode {
             if(top.state == 1){
                 idx++;
                 if (arr[idx] != null){
-                    Node leftnode = new Node(arr[idx], null, null);
-                    top.node.left = leftnode;
+                    top.node.left = new Node(arr[idx], null, null);
                     pair lp = new pair(top.node.left, 1);
                     st.push(lp);
                 }else{
                     top.node.left = null;
                 }
+                top.state++;
             } else if (top.state == 2) {
-
+                idx++;
+                if (arr[idx] != null){
+                    top.node.right = new Node(arr[idx], null, null);
+                    pair rp = new pair(top.node.right, 1);
+                    st.push(rp);
+                }else {
+                    top.node.right = null;
+                }
+                top.state++;
             }else {
-
+                st.pop();
             }
         }
+        printInOrder(root);
+        System.out.println();
     }
-
 }

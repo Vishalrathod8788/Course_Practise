@@ -18,7 +18,6 @@ public class DuplicateBracket {
                     while(st.peek() != '('){
                         st.pop();
                     }
-
                 }
             }else{
                 st.push(ch);

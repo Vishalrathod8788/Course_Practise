@@ -27,8 +27,16 @@ public class AddData {
             return arr;
         }
 
-        public static void remove(){
-
+        public static int remove(){
+            if(isEmpty()){
+                return -1;
+            }
+            int front = arr[0];
+            for(int i=0; i<rear; i++){
+                arr[i] = arr[rear+1];
+            }
+            rear--;
+            return front;
         }
     }
 }

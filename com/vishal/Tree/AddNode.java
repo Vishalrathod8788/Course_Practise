@@ -25,13 +25,21 @@ public class AddNode {
         }
 
     }
-    public static void printInOrder(Node root) {
-        if (root != null) {
-            printInOrder(root.left);
-            System.out.print(root.data + " ");
-            printInOrder(root.right);
-        }
-    }
+
+
+//    public static void AddData(Node root, int data) {
+//        if (root == null) {
+//            return;
+//        }
+//        if (root.left == null) {
+//            root.left = new Node(data, null, null);
+//        } else if (root.right == null) {
+//            root.right = new Node(data, null, null);
+//        }
+//        AddData(root.left, data);
+//        AddData(root.right, data);
+//
+//    }
 
 
     public static void main(String[] args) {
@@ -72,7 +80,28 @@ public class AddNode {
                 st.pop();
             }
         }
+//        Node root = new Node(arr[0], null, null);
+//        Node root = new Node(arr[1], null, null);
+//        Node root = new Node(arr[2], null, null);
+//        Node root = new Node(arr[3], null, null);
+//        Node root = new Node(arr[4], null, null);
         printInOrder(root);
-        System.out.println();
+
     }
+
+    static void printInOrder(Node node){
+        if (node == null)
+            return;
+        String str = "";
+
+        str += node.left != null ? node.left.data  : " * ";
+        str += " <- " + node.data + " -> ";
+        str += node.right != null ? node.right.data : " * ";
+
+        System.out.println(str);
+        printInOrder(node.left);
+        printInOrder(node.right);
+    }
+
+
 }

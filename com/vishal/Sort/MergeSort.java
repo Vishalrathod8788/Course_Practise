@@ -50,5 +50,7 @@ public class MergeSort {
         }
         return temp;
     }
+    // write new function
+
 }
 

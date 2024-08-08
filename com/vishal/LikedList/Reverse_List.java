@@ -67,6 +67,5 @@ public class Reverse_List {
         list.display();
         list.reverse();
         list.display();
-
     }
 }
